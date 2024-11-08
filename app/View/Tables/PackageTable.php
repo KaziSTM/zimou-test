@@ -98,11 +98,4 @@ class PackageTable extends DataTableComponent implements TablesInterface
         ];
     }
 
-
-    private function getDefaultBulkAction(): array
-    {
-        return [
-            'deleteConfirmation' => trans('Delete'),
-        ];
-    }
 }

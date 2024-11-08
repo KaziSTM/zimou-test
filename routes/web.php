@@ -6,8 +6,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-
 Route::namespace('App\View\Pages\Auth')->middleware('auth')->group(function () {
     Route::get('logout', Logout::class)->name('logout');
 });
