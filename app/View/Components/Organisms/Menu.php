@@ -17,11 +17,11 @@ class Menu extends Component
     {
         $this->navigation = [
             trans('Management') => [
-//                [
-//                    'label' => trans('Packages'),
-//                    'route' => 'admin.packages.index',
-//                    'icon' => 'package'
-//                ],
+                [
+                    'label' => trans('Packages'),
+                    'route' => 'package.index',
+                    'icon' => 'package'
+                ],
 
             ],
         ];

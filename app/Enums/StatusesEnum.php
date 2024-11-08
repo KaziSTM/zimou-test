@@ -23,4 +23,20 @@ final class StatusesEnum extends Enum
     {
         return collect(self::getValues())->map(fn($value) => ['name' => $value])->toArray();
     }
+
+    public static function label($value): string
+    {
+        return self::labels()[$value] ?? 'Unknown';
+    }
+
+    public static function labels(): array
+    {
+        return [
+            self::Pending => trans('Pending'),
+            self::InTransit => trans('In Transit'),
+            self::Delivered => trans('Delivered'),
+            self::Returned => trans('Returned'),
+            self::Canceled => trans('Canceled'),
+        ];
+    }
 }

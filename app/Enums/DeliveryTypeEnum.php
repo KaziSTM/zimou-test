@@ -21,4 +21,19 @@ final class DeliveryTypeEnum extends Enum
     {
         return collect(self::getValues())->map(fn($value) => ['name' => $value])->toArray();
     }
+
+    public static function label($value): string
+    {
+        return self::labels()[$value] ?? 'Unknown';
+    }
+
+    public static function labels(): array
+    {
+        return [
+            self::Standard => trans('Standard'),
+            self::Express => trans('Express'),
+            self::Overnight => trans('Overnight'),
+            self::SameDay => trans('Same Day'),
+        ];
+    }
 }

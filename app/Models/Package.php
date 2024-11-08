@@ -61,4 +61,9 @@ class Package extends Model
     {
         return $this->belongsTo(PackageStatus::class);
     }
+
+    public function commune(): BelongsTo
+    {
+        return $this->belongsTo(Commune::class);
+    }
 }
